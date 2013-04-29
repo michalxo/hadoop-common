@@ -23,16 +23,36 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <name>Apache Hadoop Main</name>
   <packaging>pom</packaging>
 
+
   <dependencyManagement>
     <dependencies>
+
+      <dependency>
+        <groupId>cz.muni.fi</groupId>
+        <artifactId>JsonSchemaProcessor</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <!--<packaging>jar</packaging>-->
+      </dependency>
+
       <dependency>
         <groupId>com.cenqua.clover</groupId>
         <artifactId>clover</artifactId>
         <!-- Use the version needed by maven-clover-plugin -->
         <version>3.0.2</version>
       </dependency>
+
     </dependencies>
   </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>cz.muni.fi</groupId>
+            <artifactId>JsonSchemaProcessor</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <!--<packaging>jar</packaging>-->
+        </dependency>
+    </dependencies>
+
 
   <distributionManagement>
     <repository>
@@ -105,6 +125,18 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <build>
     <pluginManagement>
       <plugins>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.3.2</version>
+          <!--<configuration>-->
+              <!--<source>${java.version}</source>-->
+              <!--<target>${java.version}</target>-->
+              <!--<proc>none</proc>-->
+          <!--</configuration>-->
+      </plugin>
+
+
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
@@ -120,6 +152,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
             </rules>
           </configuration>
         </plugin>
+
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
@@ -318,11 +351,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
               <goal>attach-descriptor</goal>
             </goals>
             <configuration>
-              <generateReports>true</generateReports>
+              <!--<generateReports>true</generateReports>-->
             </configuration>
           </execution>
         </executions>
       </plugin>
+
     </plugins>
   </build>
   
@@ -391,7 +425,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.4</version>
+        <!--<version>2.4</version>-->
         <reportSets>
           <reportSet>
             <reports>
@@ -492,7 +526,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         <plugins>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
+              <!--<artifactId/>-->
+              <artifactId>maven-gpg-plugin</artifactId>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
@@ -542,10 +577,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
               <cloverDatabase>${cloverDatabase}</cloverDatabase>
               <targetPercentage>50%</targetPercentage>
               <outputDirectory>${project.build.directory}/clover</outputDirectory>
-              <alwaysReport>${cloverAlwaysReport}</alwaysReport>
-              <generateHtml>${cloverGenHtml}</generateHtml>
-              <generateXml>${cloverGenXml}</generateXml>
-              <generateHistorical>${cloverGenHistorical}</generateHistorical>
+              <!--<alwaysReport>${cloverAlwaysReport}</alwaysReport>-->
+              <!--<generateHtml>${cloverGenHtml}</generateHtml>-->
+              <!--<generateXml>${cloverGenXml}</generateXml>-->
+              <!--<generateHistorical>${cloverGenHistorical}</generateHistorical>-->
             </configuration>
             <executions>
               <execution>

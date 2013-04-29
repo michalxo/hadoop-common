@@ -37,7 +37,7 @@
     <module>hadoop-annotations</module>
   </modules>
 
-  <build>
+    <build>
     <plugins>
       <plugin>
         <artifactId>maven-deploy-plugin</artifactId>

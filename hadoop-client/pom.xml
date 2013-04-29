@@ -33,8 +33,10 @@
    <hadoop.component>client</hadoop.component>
  </properties>
 
+
   <dependencies>
-    <dependency>
+
+      <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-common</artifactId>
       <scope>compile</scope>

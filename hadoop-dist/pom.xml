@@ -32,6 +32,7 @@
 
   <!-- Using dependencies to ensure this module is the last one -->
   <dependencies>
+
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-common</artifactId>

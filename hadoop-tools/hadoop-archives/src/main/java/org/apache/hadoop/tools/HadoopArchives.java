@@ -896,6 +896,8 @@ public class HadoopArchives implements Tool {
       ret = ToolRunner.run(harchives, args);
     } catch(Exception e) {
       LOG.debug("Exception in archives  ", e);
+      //LOG.debug(org.apache.hadoop.Archives, "EXCEPTION", e);
+
       System.err.println(e.getClass().getSimpleName() + " in archives");
       final String s = e.getLocalizedMessage();
       if (s != null) {

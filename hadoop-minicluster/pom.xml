@@ -30,6 +30,7 @@
   <name>Apache Hadoop Mini-Cluster</name>
 
   <dependencies>
+
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-common</artifactId>
