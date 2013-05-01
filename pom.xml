@@ -129,11 +129,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>2.3.2</version>
-          <!--<configuration>-->
-              <!--<source>${java.version}</source>-->
-              <!--<target>${java.version}</target>-->
-              <!--<proc>none</proc>-->
-          <!--</configuration>-->
+          <configuration>
+              <source>1.7</source>
+              <target>1.7</target>
+              <proc>none</proc>
+          </configuration>
       </plugin>
 
 
